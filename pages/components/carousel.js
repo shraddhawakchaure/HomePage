@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Grid } from '@mui/material';
+import Form from './form';
 
 export default class NextJsCarousel extends Component {
     render() {
@@ -10,15 +11,13 @@ export default class NextJsCarousel extends Component {
               <Carousel infiniteLoop useKeyboardArrows autoPlay>
                   <div>
                      <Grid container>
-                         <Grid item xs={6}>
+                         <Grid item xs={7}>
                             <div>
-                             <form>
-                                 <h6>
-                                <input type="text" id="fname" value="Your Email Address"/>
-                                <input type="submit" value="Go" sx={{bgcolor:"black"}}/>
-                                </h6>
-                             </form>
+                            <Form/>
                             </div>
+                         </Grid>
+                         <Grid item xs={5}>
+                            <img src="/1.png" alt="image1"/>
                          </Grid>
                      </Grid>
                   </div>
