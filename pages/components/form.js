@@ -1,7 +1,7 @@
 import { Button, formatMs } from "@material-ui/core";
 import React, { Component } from "react";
 
-export default function Form() {
+export default function Form(props) {
   return (
     <div>
         <br/>
@@ -11,7 +11,7 @@ export default function Form() {
       <form>
         <h6>
           <input type="text" id="fname" value="Your Email Address" />
-          <input type="button" value="Go"/>
+          <input type="button"/>
         </h6>
       </form>
     </div>

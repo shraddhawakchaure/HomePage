@@ -1,48 +1,41 @@
-import React, { Component } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import { Grid } from '@mui/material';
-import Form from './form';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
-export default class NextJsCarousel extends Component {
-    render() {
-        return (
-            <div>
-              <Carousel infiniteLoop useKeyboardArrows autoPlay>
-                  <div>
-                     <Grid container>
-                         <Grid item xs={7}>
-                            <div>
-                            <Form/>
-                            </div>
-                         </Grid>
-                         <Grid item xs={5}>
-                            <img src="/1.png" alt="image1"/>
-                         </Grid>
-                     </Grid>
-                  </div>
-                  <div>
-                      <img src="/2.png" alt="image2" />
-                      <p className="legend">Image 2</p>
-  
-                  </div>
-                  <div>
-                      <img src="/3.png" alt="image3"/>
-                      <p className="legend">Image 3</p>
-  
-                  </div>
-                  <div>
-                      <img src="/4.png" alt="image4"/>
-                      <p className="legend">Image 4</p>
-  
-                  </div>
-                  <div>
-                      <img src="/5.png" alt="image5"/>
-                      <p className="legend">Image 5</p>
-  
-                  </div>
-              </Carousel>
-            </div>
-        );
-    }
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+export default () => {
+  return (
+    <Swiper
+      className="swiper-container"
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+      pagination={{
+        dynamicBullets: true,
+      }}
+      spaceBetween={0}
+      slidesPerView={1}
+      navigation
+      autoplay= {{autoplay: true}}
+      running="true"
+      pagination={{ clickable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log("slide change")}
+    >
+      <SwiperSlide>Slide1</SwiperSlide>  
+      <SwiperSlide>
+        <img src="/2.png" alt="image2" width={"100%"}/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/3.png" alt="image3" width={"100%"}/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/4.png" alt="image4" width={"100%"}/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="/5.png" alt="image5" width={"100%"}/>
+      </SwiperSlide>
+    </Swiper>
+  );
 };

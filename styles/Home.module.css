@@ -86,17 +86,6 @@
   max-width: 300px;
 }
 
-.h1 {
-  color: black;
-}
-
-.h4 {
-  color: grey;
-}
-
-.danger {
-  color: red;
-}
 .card:hover,
 .card:focus,
 .card:active {
@@ -126,3 +115,4 @@
     flex-direction: column;
   }
 }
+

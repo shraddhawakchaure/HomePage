@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { ClassNames } from '@emotion/react';
-import {grey} from '@mui/material/colors';
+import {lightBlue} from '@mui/material/colors';
 import CheckroomRoundedIcon from '@mui/icons-material/CheckroomRounded';
 
 const pages = ['Mobile covers','T-Shirts', 'Mugs', 'PopSockets', 'xyz'];
@@ -41,8 +41,8 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{height:60, bgcolor:grey[900]}}>
-      <Container maxWidth="xl" maxHeight="10px">
+    <AppBar position="static" sx={{bgcolor:lightBlue[900]}}>
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -60,7 +60,7 @@ const ResponsiveAppBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color='default'
+              color='inherit'
             >
               <MenuIcon />
             </IconButton>
